@@ -286,7 +286,41 @@
       color: var(--ink-soft);
     }
 
-    .art-mystery { background: linear-gradient(160deg, #2d4a36, #1d3324); }
+    /* Mystery item: same card shape, swapped art tile */
+    .item-art.is-mystery {
+      background: linear-gradient(160deg, #2d4a36, #1d3324);
+      position: relative;
+      color: var(--cream);
+    }
+    .item-art.is-mystery::after {
+      content: "";
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(245,236,217,0.08) 0 6px, transparent 7px),
+        radial-gradient(circle at 70% 60%, rgba(245,236,217,0.07) 0 5px, transparent 6px),
+        radial-gradient(circle at 40% 85%, rgba(245,236,217,0.06) 0 4px, transparent 5px);
+      pointer-events: none;
+    }
+    .item-art.is-mystery .qmark {
+      position: relative;
+      z-index: 1;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(3.5rem, 6vw, 5rem);
+      line-height: 1;
+    }
+    .item.is-mystery .kicker { color: var(--forest); }
+
+    /* Note below the grid explaining the mystery cards */
+    .mystery-note {
+      max-width: 38rem;
+      margin: clamp(2rem, 4vw, 3rem) auto 0;
+      text-align: center;
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+      font-style: italic;
+      color: var(--forest);
+    }
 
     /* ---------- Welcome-to-Pakistan reveal ---------- */
     .reveal {
@@ -313,54 +347,6 @@
     .reveal-image img { width: 100%; height: auto; display: block; }
     .reveal h2 .accent { font-style: italic; color: var(--terracotta); font-weight: 500; }
     .reveal p { font-size: 1.05rem; }
-
-    /* ---------- Mystery ---------- */
-    .mystery-block { margin-top: clamp(3rem, 6vw, 5rem); }
-    .mystery-header {
-      text-align: center;
-      max-width: 36rem;
-      margin: 0 auto clamp(1.75rem, 3vw, 2.5rem);
-    }
-    .mystery-header h3 {
-      font-family: var(--serif);
-      font-size: clamp(1.6rem, 3vw, 2.1rem);
-      font-weight: 500;
-      font-style: italic;
-      color: var(--forest);
-    }
-    .mystery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: clamp(1rem, 2vw, 1.75rem);
-      max-width: 760px;
-      margin: 0 auto;
-    }
-    @media (max-width: 600px) {
-      .mystery-grid { grid-template-columns: 1fr; }
-    }
-    .mystery {
-      aspect-ratio: 1 / 1;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      color: var(--cream);
-      font-family: var(--serif);
-      font-size: clamp(3rem, 6vw, 4.5rem);
-      font-weight: 600;
-      border: 1px solid var(--rule);
-      position: relative;
-      overflow: hidden;
-    }
-    .mystery::after {
-      content: "";
-      position: absolute; inset: 0;
-      background-image:
-        radial-gradient(circle at 20% 20%, rgba(245,236,217,0.08) 0 6px, transparent 7px),
-        radial-gradient(circle at 70% 60%, rgba(245,236,217,0.07) 0 5px, transparent 6px),
-        radial-gradient(circle at 40% 85%, rgba(245,236,217,0.06) 0 4px, transparent 5px);
-      pointer-events: none;
-    }
-    .mystery span { position: relative; z-index: 1; }
 
     /* ---------- Coming Soon ---------- */
     .soon {
@@ -554,21 +540,36 @@
           <p>The cult-classic ice-cream soda in electric green. A taste of every Karachi summer, in a single can.</p>
         </article>
 
+        <!-- Mystery item 1 -->
+        <article class="item is-mystery">
+          <div class="item-art is-mystery" aria-hidden="true">
+            <span class="qmark">?</span>
+          </div>
+          <span class="kicker">Mystery item #1</span>
+          <p>A small object you'll meet when you lift the lid.</p>
+        </article>
+
+        <!-- Mystery item 2 -->
+        <article class="item is-mystery">
+          <div class="item-art is-mystery" aria-hidden="true">
+            <span class="qmark">?</span>
+          </div>
+          <span class="kicker">Mystery item #2</span>
+          <p>Not a snack. Quietly, surely Pakistan.</p>
+        </article>
+
+        <!-- Mystery item 3 -->
+        <article class="item is-mystery">
+          <div class="item-art is-mystery" aria-hidden="true">
+            <span class="qmark">?</span>
+          </div>
+          <span class="kicker">Mystery item #3</span>
+          <p>Something to keep, long after the box is empty.</p>
+        </article>
+
       </div>
 
-      <!-- MYSTERY ITEMS -->
-      <div class="mystery-block">
-        <div class="mystery-header">
-          <span class="eyebrow">Plus three quiet surprises</span>
-          <h3>And three more things that whisper <em>Pakistan</em>.</h3>
-          <p>Not snacks. Small objects, chosen carefully. You'll find out when you open the box.</p>
-        </div>
-        <div class="mystery-grid" aria-label="Three mystery items">
-          <div class="mystery art-mystery" aria-label="Mystery item 1"><span>?</span></div>
-          <div class="mystery art-mystery" aria-label="Mystery item 2"><span>?</span></div>
-          <div class="mystery art-mystery" aria-label="Mystery item 3"><span>?</span></div>
-        </div>
-      </div>
+      <p class="mystery-note">Three of the eight aren't snacks. They're small keepsakes, chosen to speak of Pakistan in their own quiet way.</p>
 
     </div>
   </section>

@@ -23,3 +23,9 @@ uploads/
 # Environment files (in case you ever add a build step)
 .env
 .env.local
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example

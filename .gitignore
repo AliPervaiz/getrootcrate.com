@@ -1,0 +1,25 @@
+# macOS / Windows / Linux junk
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Original / source product photography. The processed, web-optimized
+# versions live in /img and are what ships to Cloudflare Pages.
+uploads/
+
+# Log files
+*.log
+
+# Environment files (in case you ever add a build step)
+.env
+.env.local

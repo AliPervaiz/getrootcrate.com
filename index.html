@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Root Crate · Cultural boxes from around the world</title>
+  <meta name="description" content="Root Crate curates cultural boxes from countries around the world. Our first box celebrates Pakistan. Coming soon." />
+  <meta name="theme-color" content="#f5ecd9" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Root Crate · Cultural boxes from around the world" />
+  <meta property="og:description" content="A small, curated box that carries a country home. Our first box celebrates Pakistan. Selling very soon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getrootcrate.com" />
+  <meta property="og:image" content="https://getrootcrate.com/img/crate-flatlay.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="1500" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://getrootcrate.com/img/crate-flatlay.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon-128.png" />
+  <link rel="apple-touch-icon" href="img/logo-mark-large.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --cream: #f5ecd9;
+      --cream-soft: #faf3e3;
+      --terracotta: #c75d3a;
+      --terracotta-deep: #a44627;
+      --forest: #2d4a36;
+      --ink: #2a1f17;
+      --ink-soft: #5a4838;
+      --gold: #c69a48;
+      --rule: #e3d6b7;
+
+      --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      --sans: "Inter", system-ui, -apple-system, sans-serif;
+
+      --maxw: 1100px;
+      --pad: clamp(1.25rem, 4vw, 3rem);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--serif);
+      font-weight: 500;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      margin: 0 0 0.6em;
+    }
+
+    h1 { font-size: clamp(2.8rem, 7vw, 5.25rem); font-weight: 600; }
+    h2 { font-size: clamp(2rem, 4.5vw, 3.25rem); }
+    h3 { font-size: clamp(1.35rem, 2.2vw, 1.7rem); font-weight: 600; }
+
+    p { margin: 0 0 1em; color: var(--ink-soft); }
+
+    a { color: var(--terracotta-deep); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+
+    /* ---------- Header ---------- */
+    header.site {
+      padding: 1.75rem 0 0.5rem;
+    }
+    .site-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: var(--ink);
+      letter-spacing: 0.01em;
+    }
+    .logo-mark {
+      width: 40px; height: 40px;
+      display: grid; place-items: center;
+      flex: 0 0 auto;
+    }
+    .logo-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .tag-pill {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--forest);
+      border: 1px solid var(--rule);
+      background: var(--cream-soft);
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      padding: clamp(2.5rem, 7vw, 5rem) 0 clamp(2rem, 5vw, 4rem);
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center;
+    }
+    @media (max-width: 820px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-image { order: -1; max-width: 540px; margin: 0 auto; }
+    }
+    .hero-image {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px -30px rgba(58, 42, 31, 0.35),
+                  0 8px 20px -10px rgba(58, 42, 31, 0.15);
+      background: var(--cream-soft);
+    }
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--terracotta-deep);
+      margin-bottom: 1.25rem;
+      display: inline-block;
+    }
+    .hero h1 .accent {
+      font-style: italic;
+      color: var(--terracotta);
+      font-weight: 500;
+    }
+    .hero p.lede {
+      font-family: var(--serif);
+      font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+      max-width: 36rem;
+      color: var(--ink-soft);
+      margin-top: 1.25rem;
+      line-height: 1.5;
+    }
+
+    /* decorative divider */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 3.5rem 0 2.5rem;
+      color: var(--terracotta);
+    }
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+    .divider svg { width: 28px; height: 28px; flex: 0 0 auto; }
+
+    /* ---------- Story ---------- */
+    .story {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: start;
+    }
+    @media (max-width: 760px) {
+      .story-grid { grid-template-columns: 1fr; }
+    }
+    .story h2 .accent {
+      font-style: italic;
+      color: var(--terracotta);
+      font-weight: 500;
+    }
+    .story p { font-size: 1.05rem; }
+
+    /* ---------- Box section ---------- */
+    .box-section {
+      padding: clamp(3rem, 7vw, 6rem) 0;
+      background: var(--cream-soft);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+    .box-header {
+      max-width: 42rem;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .box-header .eyebrow { color: var(--forest); }
+
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: clamp(1.25rem, 2.5vw, 2rem);
+    }
+
+    .item {
+      background: var(--cream);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 1.5rem 1.5rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px -12px rgba(58, 42, 31, 0.18);
+    }
+    .item-art {
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1.1rem;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: var(--cream-soft);
+    }
+    .item-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .item:hover .item-art img { transform: scale(1.03); }
+    .item h3 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      margin: 0 0 0.15rem;
+    }
+    .item .kicker {
+      font-family: var(--sans);
+      font-size: 0.74rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+    .item p {
+      font-size: 0.95rem;
+      margin: 0;
+      color: var(--ink-soft);
+    }
+
+    .art-mystery { background: linear-gradient(160deg, #2d4a36, #1d3324); }
+
+    /* ---------- Welcome-to-Pakistan reveal ---------- */
+    .reveal {
+      padding: clamp(3rem, 7vw, 6rem) 0;
+      background: var(--cream);
+    }
+    .reveal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center;
+    }
+    @media (max-width: 820px) {
+      .reveal-grid { grid-template-columns: 1fr; }
+    }
+    .reveal-image {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px -30px rgba(58, 42, 31, 0.35),
+                  0 8px 20px -10px rgba(58, 42, 31, 0.15);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .reveal-image img { width: 100%; height: auto; display: block; }
+    .reveal h2 .accent { font-style: italic; color: var(--terracotta); font-weight: 500; }
+    .reveal p { font-size: 1.05rem; }
+
+    /* ---------- Mystery ---------- */
+    .mystery-block { margin-top: clamp(3rem, 6vw, 5rem); }
+    .mystery-header {
+      text-align: center;
+      max-width: 36rem;
+      margin: 0 auto clamp(1.75rem, 3vw, 2.5rem);
+    }
+    .mystery-header h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      font-weight: 500;
+      font-style: italic;
+      color: var(--forest);
+    }
+    .mystery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(1rem, 2vw, 1.75rem);
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    @media (max-width: 600px) {
+      .mystery-grid { grid-template-columns: 1fr; }
+    }
+    .mystery {
+      aspect-ratio: 1 / 1;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: var(--cream);
+      font-family: var(--serif);
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      font-weight: 600;
+      border: 1px solid var(--rule);
+      position: relative;
+      overflow: hidden;
+    }
+    .mystery::after {
+      content: "";
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(245,236,217,0.08) 0 6px, transparent 7px),
+        radial-gradient(circle at 70% 60%, rgba(245,236,217,0.07) 0 5px, transparent 6px),
+        radial-gradient(circle at 40% 85%, rgba(245,236,217,0.06) 0 4px, transparent 5px);
+      pointer-events: none;
+    }
+    .mystery span { position: relative; z-index: 1; }
+
+    /* ---------- Coming Soon ---------- */
+    .soon {
+      padding: clamp(4rem, 9vw, 7rem) 0;
+      text-align: center;
+    }
+    .soon h2 {
+      max-width: 26rem;
+      margin: 0 auto 1.25rem;
+    }
+    .soon h2 .accent { font-style: italic; color: var(--terracotta); font-weight: 500; }
+    .soon p {
+      max-width: 32rem;
+      margin: 0 auto 1.5rem;
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      color: var(--ink-soft);
+    }
+    .soon .badge {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: var(--forest);
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+    }
+
+    /* ---------- Footer ---------- */
+    footer.site {
+      border-top: 1px solid var(--rule);
+      padding: 2.5rem 0 3rem;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+    .foot-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .foot-inner .logo { font-size: 1.1rem; }
+    .foot-inner .logo-mark { width: 32px; height: 32px; }
+  </style>
+</head>
+<body>
+
+  <header class="site">
+    <div class="wrap site-inner">
+      <a href="#" class="logo" aria-label="Root Crate home">
+        <span class="logo-mark"><img src="img/logo-mark.png" alt="" /></span>
+        <span>Root Crate</span>
+      </a>
+      <span class="tag-pill">Launching soon</span>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Cultural boxes &middot; Country No 01 &middot; Pakistan</span>
+        <h1>A small box that carries a <span class="accent">country home.</span></h1>
+        <p class="lede">
+          Root Crate is a curated box of flavors, objects, and stories from one country at a time. We start with Pakistan, and we have many more to come.
+        </p>
+      </div>
+      <div class="hero-image">
+        <img src="img/crate-closed.jpg" alt="The closed Root Crate box: green and cream, featuring a willow tree and the Root Crate wordmark." width="1600" height="1100" />
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="divider" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none">
+          <path d="M16 3 L19 13 L29 16 L19 19 L16 29 L13 19 L3 16 L13 13 Z" fill="currentColor" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STORY ===== -->
+  <section class="story">
+    <div class="wrap story-grid">
+      <div>
+        <span class="eyebrow">Our idea</span>
+        <h2>Heritage, <span class="accent">hand-picked.</span></h2>
+      </div>
+      <div>
+        <p>
+          Every Root Crate is built around a single country. Inside, you'll find the snacks people grew up on, the drinks shared at family tables, and a few quiet, surprising objects that tell you something about the place.
+        </p>
+        <p>
+          We're not trying to summarize a culture. We're trying to send you a thoughtful slice of one: to remind you of home, to introduce you to somewhere new, or just to give you something delightful to open.
+        </p>
+        <p>
+          Our first box celebrates Pakistan. The next ones will travel elsewhere.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE BOX ===== -->
+  <section class="box-section" id="pakistan">
+    <div class="wrap">
+      <div class="box-header">
+        <span class="eyebrow">Inside Crate No 01</span>
+        <h2>The Pakistan Box.</h2>
+        <p>Five staples chosen for nostalgia, plus three quiet surprises that speak to Pakistan in their own way. Each box is small, deliberate, and built to be opened slowly.</p>
+      </div>
+
+      <div class="items-grid">
+
+        <!-- Rooh Afza -->
+        <article class="item">
+          <div class="item-art">
+            <img src="img/rooh-afza.jpg" alt="A bottle of Hamdard Rooh Afza, a crimson rose-and-herb syrup, against a warm cream background." loading="lazy" width="800" height="800" />
+          </div>
+          <span class="kicker">The crimson syrup</span>
+          <h3>Rooh Afza</h3>
+          <p>A century-old rose-and-herb cordial poured over ice on summer afternoons. Pour, stir, remember.</p>
+        </article>
+
+        <!-- Nimco -->
+        <article class="item">
+          <div class="item-art">
+            <img src="img/nimco.jpg" alt="A packet of Nimco Spicy Potato Sticks against a warm cream background." loading="lazy" width="800" height="800" />
+          </div>
+          <span class="kicker">Crunchy &amp; fiery</span>
+          <h3>Nimco Spicy Sticks</h3>
+          <p>Crisp, fiery potato sticks dusted with chili and salt. The packet that disappears at every gathering.</p>
+        </article>
+
+        <!-- Chili Mili -->
+        <article class="item">
+          <div class="item-art">
+            <img src="img/chili-mili.jpg" alt="A bag of Chili Mili fruity jelly candies against a warm cream background." loading="lazy" width="800" height="800" />
+          </div>
+          <span class="kicker">Fruity jellies</span>
+          <h3>Chili Mili</h3>
+          <p>The rainbow-bright fruity chews of every Pakistani childhood. Tangy, sweet, and impossible to eat just one of.</p>
+        </article>
+
+        <!-- Sooper -->
+        <article class="item">
+          <div class="item-art">
+            <img src="img/sooper.jpg" alt="A red box of Sooper cookies against a warm cream background." loading="lazy" width="800" height="800" />
+          </div>
+          <span class="kicker">Tea-time classic</span>
+          <h3>Sooper</h3>
+          <p>The original Pakistani biscuit. Crisp, faintly sweet, and best dipped twice into a steaming cup of milky chai.</p>
+        </article>
+
+        <!-- Pakola -->
+        <article class="item">
+          <div class="item-art">
+            <img src="img/pakola.jpg" alt="A green can of Pakola ice-cream soda, beaded with condensation, against a warm cream background." loading="lazy" width="800" height="800" />
+          </div>
+          <span class="kicker">The green soda</span>
+          <h3>Pakola</h3>
+          <p>The cult-classic ice-cream soda in electric green. A taste of every Karachi summer, in a single can.</p>
+        </article>
+
+      </div>
+
+      <!-- MYSTERY ITEMS -->
+      <div class="mystery-block">
+        <div class="mystery-header">
+          <span class="eyebrow">Plus three quiet surprises</span>
+          <h3>And three more things that whisper <em>Pakistan</em>.</h3>
+          <p>Not snacks. Small objects, chosen carefully. You'll find out when you open the box.</p>
+        </div>
+        <div class="mystery-grid" aria-label="Three mystery items">
+          <div class="mystery art-mystery" aria-label="Mystery item 1"><span>?</span></div>
+          <div class="mystery art-mystery" aria-label="Mystery item 2"><span>?</span></div>
+          <div class="mystery art-mystery" aria-label="Mystery item 3"><span>?</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== REVEAL ===== -->
+  <section class="reveal">
+    <div class="wrap reveal-grid">
+      <div class="reveal-image">
+        <img src="img/crate-flatlay.jpg" alt="The Root Crate Pakistan box, opened and styled with its contents (Rooh Afza, Sooper biscuits, Pakola, Chili Mili, and Nimco) scattered around it on a soft blue backdrop." loading="lazy" width="1200" height="1500" />
+      </div>
+      <div>
+        <span class="eyebrow">When you open it</span>
+        <h2>A small <span class="accent">welcome,</span> tucked inside.</h2>
+        <p>
+          Every Root Crate opens with a moment of place. The Pakistan box greets you in green and cream, with a star and crescent, and three words: <em>Welcome to Pakistan</em>.
+        </p>
+        <p>
+          Inside, the staples we grew up on, the surprises that whisper a country, and a small story for each.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMING SOON ===== -->
+  <section class="soon">
+    <div class="wrap">
+      <span class="eyebrow">Almost ready</span>
+      <h2>Selling <span class="accent">very soon.</span></h2>
+      <p>We're putting the final touches on Crate No 01. Check back shortly, or come find us when the doors open.</p>
+      <span class="badge">Launch coming</span>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site">
+    <div class="wrap foot-inner">
+      <a href="#" class="logo" aria-label="Root Crate home">
+        <span class="logo-mark"><img src="img/logo-mark.png" alt="" /></span>
+        <span>Root Crate</span>
+      </a>
+      <div>&copy; <span id="year">2026</span> Root Crate. One country at a time.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
